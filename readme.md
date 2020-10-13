@@ -1,15 +1,14 @@
 [Перейти на русскую версию сайта](/README_rus.md)
 
-# Zigbee + BLE Gateway
+# Zigbee 
 
-This product is designed to work with common ZigBee, BLE devices. The gateway is based on the controller [ESP32 from Espressif](https://www.espressif.com/sites/default/files/documentation/esp32-wrover_datasheet_en.pdf). The tandem of chips from Texas Instruments [ZIgbee CC2538](https://www.ti.com/product/CC2538?utm_source=google&utm_medium=cpc&utm_campaign=epd-null-null-GPN_EN-cpc-pfgo-wwe&utm_content=CC2538&ds_k=%7b_dssearchterm%7d&DCM=yes&gclid=CjwKCAiA35rxBRAWEiwADqB37x__0Gm1rR2TUfCBETyuqrLjOtof6TuYSD3ZHzINYdNAbrXqfDxrwRoCpToQAvD_BwE&gclsrc=aw.ds) and amplifier [CC2592](https://www.ti.com/product/CC2592utm_source=google&utm_medium=cpc&utm_campaign=epd-null-null-GPN_EN-cpc-pf-google-wwe&utm_content=CC2592&ds_k=%7b_dssearchterm%7d&DCM=yes&gclid=CjwKCAiA35rxBRAWEiwADqB3776CVlMD1GHdk-unOn9R0YeMtlwAnjUvCIPuWvjhNqZRbiq6zy-ExoCxjYQAvD_BwE&gclsrc=aw.ds), either ready chip [NXP JN5168](https://www.nxp.com/products/wireless/zigbee/zigbee-and-ieee802.15.4-wireless-microcontroller-with-256-kb-flash-32-kb-ram:JN5168). To communicate with devices using the BLE protocol, the built-in capabilities of ESP32 are used.
-
-Support for BLE and the NXP JN5168/JN5169 module is currently undergoing testing and is expected soon.
+This product is designed to work with common ZigBee, BLE devices. The gateway is based on the controller [ESP32 from Espressif](https://www.espressif.com/sites/default/files/documentation/esp32-wrover_datasheet_en.pdf). The tandem of chips from Texas Instruments [ZIgbee CC2538](https://www.ti.com/product/CC2538?utm_source=google&utm_medium=cpc&utm_campaign=epd-null-null-GPN_EN-cpc-pfgo-wwe&utm_content=CC2538&ds_k=%7b_dssearchterm%7d&DCM=yes&gclid=CjwKCAiA35rxBRAWEiwADqB37x__0Gm1rR2TUfCBETyuqrLjOtof6TuYSD3ZHzINYdNAbrXqfDxrwRoCpToQAvD_BwE&gclsrc=aw.ds) and amplifier [CC2592](https://www.ti.com/product/CC2592utm_source=google&utm_medium=cpc&utm_campaign=epd-null-null-GPN_EN-cpc-pf-google-wwe&utm_content=CC2592&ds_k=%7b_dssearchterm%7d&DCM=yes&gclid=CjwKCAiA35rxBRAWEiwADqB3776CVlMD1GHdk-unOn9R0YeMtlwAnjUvCIPuWvjhNqZRbiq6zy-ExoCxjYQAvD_BwE&gclsrc=aw.ds)
 
 # General information
 The gateway acts as the coordinator of Zigbee and allows you to:
 
-1) Use most of the available Zigbee equipment. A list of supported and tested equipment is available at [link](/devices/devices.md). New equipment may be added after discussion with us.
+1) Use most of the available Zigbee equipment. A list of supported and tested equipment is available at [link](https://slsys.io/action/devicelists.html). New equipment may be added after discussion with us.
+
 
 2) Abandon the need to use cloud device manufacturers. As an alternative, it is proposed to use the cloud service [Smart Logic System](https://cloud.slsys.io), or native applications for Android and Apple iPhone (under development).
 
@@ -19,7 +18,7 @@ The gateway acts as the coordinator of Zigbee and allows you to:
 # Additional gateway features via the web interface
 1. Management and viewing of device information through the Web interface of the gateway at http://ipadress (port 80). The ability to display the power source, battery level, available [EndPoint devices](https://community.nxp.com/thread/332332) in the web interface.
 
-2. Creation of local automation within the gateway [SimpleBind](/simpleBind_eng.md).
+2. Creation of local automation within the gateway [SimpleBind](/simplebind_eng.md).
 
 3. The ability to write scripts in [Lua](https://ru.wikipedia.org/wiki/Lua). 
 
@@ -85,13 +84,19 @@ Note: there are two firmware versions, for chips with 4mb and 16mb FLASH RAM. Ve
 
 ## [HTTP API description](/http_api_eng.md)
 
+## [Map zigbee network](/map_eng.md)
+
 ## [FAQ (Frequently Asked Questions)](/faq_eng.md)
 
 ## [zigbee2mqtt message structure](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html) (most commands supported)
 
 ## [SLS zigbee2mqtt message structure](/slscommand_eng.md)
 
+## [Supported devices](https://slsys.io/action/devicelists.html)
 
+## [Fundraising to buy equipment to add support](/donate_eng.md)
+
+## [Custom dashboard](/ui_eng.md)
 
 # Integrations
 
@@ -113,3 +118,19 @@ Thanks to the use of the MQTT protocol, the SLS ZG gateway can be integrated wit
 ## [Integration with HomeKit](/int_homekit_eng.md) (under development)
 
 ## [Integration with Domoticz](/int_domoticz_eng.md) (under development)
+
+
+# Useful links
+[Official chat of the project](https://t.me/slsys)
+
+[News group and new firmware versions](https://t.me/slssys)
+
+[List of supported devices](https://slsys.io/action/devicelists.html)
+
+[How to build a gateway yourself](https://modkam.ru/?p=1342)
+
+[Where to purchase](https://t.me/zigberu)
+
+[Partner chat to discuss Zigbee devices](https://t.me/zigbeer)
+
+[Russian Wiki on myzigbee.ru portal](https://myzigbee.ru/)

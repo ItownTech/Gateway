@@ -1,16 +1,15 @@
-[Go to the english version of the site](/README.md)
+[Go to the english version of the site](/readme.md)
 
-# Zigbee + BLE шлюз
+# Zigbee шлюз
 
-Шлюз  предназначен для работы с  устройствами ZigBee, BLE.  В основе  лежит контроллер [ESP32 от Espressif ](https://www.espressif.com/sites/default/files/documentation/esp32-wrover_datasheet_en.pdf). В качестве связущего звена протокола Zigbee  выступает тандем чипов от Texas Instruments [ZIgbee CC2538](https://www.ti.com/product/CC2538?utm_source=google&utm_medium=cpc&utm_campaign=epd-null-null-GPN_EN-cpc-pf-google-wwe&utm_content=CC2538&ds_k=%7b_dssearchterm%7d&DCM=yes&gclid=CjwKCAiA35rxBRAWEiwADqB37x__0Gm1rR2TUfCBETyuqrLjOtof6TuYSD3ZHzINYdNAbrXqfDxrwRoCpToQAvD_BwE&gclsrc=aw.ds) и  усилителя  [сс2592](https://www.ti.com/product/CC2592?utm_source=google&utm_medium=cpc&utm_campaign=epd-null-null-GPN_EN-cpc-pf-google-wwe&utm_content=CC2592&ds_k=%7b_dssearchterm%7d&DCM=yes&gclid=CjwKCAiA35rxBRAWEiwADqB3776CVlMD1GHdk-unOn9R0YeMtlwAnjUv-CIPuWvjhNqZRbiq6zy-ExoCxjYQAvD_BwE&gclsrc=aw.ds), либо готовый чип от [NXP JN5168](https://www.nxp.com/products/wireless/zigbee/zigbee-and-ieee802.15.4-wireless-microcontroller-with-256-kb-flash-32-kb-ram:JN5168). Для связи с устройствами по протоколу BLE используются встроенные возможности ESP32.
+Шлюз  предназначен для работы с  устройствами ZigBee.  В основе  лежит контроллер [ESP32 от Espressif](https://www.espressif.com/sites/default/files/documentation/esp32-wrover_datasheet_en.pdf). В качестве связущего звена протокола Zigbee  выступает тандем чипов от Texas Instruments [ZIgbee CC2538](https://www.ti.com/product/CC2538?utm_source=google&utm_medium=cpc&utm_campaign=epd-null-null-GPN_EN-cpc-pf-google-wwe&utm_content=CC2538&ds_k=%7b_dssearchterm%7d&DCM=yes&gclid=CjwKCAiA35rxBRAWEiwADqB37x__0Gm1rR2TUfCBETyuqrLjOtof6TuYSD3ZHzINYdNAbrXqfDxrwRoCpToQAvD_BwE&gclsrc=aw.ds) и  усилителя  [сс2592](https://www.ti.com/product/CC2592?utm_source=google&utm_medium=cpc&utm_campaign=epd-null-null-GPN_EN-cpc-pf-google-wwe&utm_content=CC2592&ds_k=%7b_dssearchterm%7d&DCM=yes&gclid=CjwKCAiA35rxBRAWEiwADqB3776CVlMD1GHdk-unOn9R0YeMtlwAnjUv-CIPuWvjhNqZRbiq6zy-ExoCxjYQAvD_BwE&gclsrc=aw.ds).
 
-Поддержка BLE и модуля NXP JN5168/JN5169 в настоящее время проходит тестирование  и  ожидается в ближайшее время. 
 
 
 # Общие сведения
 Шлюз выполняет роль координатора Zigbee и позволяет:
 
-1) Использовать большинство доступного Zigbee оборудования. Список поддерживаемого и протестированного обрудования доступен по [ссылке](http://cloud.slsys.io:943/action/devicelists.html). Новое оборудование может быть добавлено после обсуждения с нами.
+1) Использовать большинство доступного Zigbee оборудования. Список поддерживаемого и протестированного обрудования доступен по [ссылке](https://slsys.io/action/devicelists.html). Новое оборудование может быть добавлено после обсуждения с нами.
 
 2) Отказаться от необходимости использования облаков производителей устройств. В качестве альтернативы, предлагается использовать облачный сервис [Smart Logic System](https://cloud.slsys.io), либо нативные приложения для Android и Apple iPhone (в разработке). 
 
@@ -20,7 +19,7 @@
 # Дополнительные возможности шлюза через Web интерфейс
 1. Управление и просмотр сведений  устройств через Web интерфейс шлюза по адресу http://ipadress (80 порт). Возможность отображения источника питания, уровня заряда батареи, доступных [EndPoint устройств](https://community.nxp.com/thread/332332)  в web-интерфейсе.
 
-2. Создание локальных автоматизаций внутри шлюза [SimpleBind](/simpledind_rus.md).
+2. Создание локальных автоматизаций внутри шлюза [SimpleBind](/simplebind_rus.md).
 
 3. Возможность написания сценариев на языке [Lua](https://ru.wikipedia.org/wiki/Lua) [Книга по Lua на русском языке](https://www.htbook.ru/kompjutery_i_seti/programmirovanie/programmirovanie-na-yazyke-lua).
 
@@ -44,8 +43,6 @@
 
 13.	Возможность перехода шлюза в режим АР при нажатии аппаратной кнопки в течение 2-5 секунд после подачи питания.
 
-14.	Список поддерживаемых устройств постоянно обновляется (информация находится в файле converters.txt в архиве с прошивкой)
-
 
 
 # Аппаратная часть
@@ -60,12 +57,7 @@
 
 [История изменений прошивки](/rom/history_ru.md)
 
-Для прошивки запустить соответствующий батник из архива.
-При первом запуске, создается точка доступа c именем вида zgwABCD, без пароля.
-После подключения к ней, автоматически открывается страница настроек (если не открылась, можно зайти по адресу 192.168.1.1) и прописываем подключение к точке доступа и к MQTT серверу (но его можно указать и позже), нажимаем перезагрузку и шлюз подключится к точке доступа и начнет слать сообщения в MQTT. В случае возникновения проблем с доступом к captive portal, рекомендуется отключать GPRS на Android смартфонах. Обновление прошивок можно производить через Web интерфейс приложения.
-
-Замечание: существует две версии прошивки, для чипов с 4мб и 16 мб FLASH RAM. Версии отличаются наличием возможности производить обновление через OTA.
-
+[Подробная инструкция по перепрошивке](flashing_rus.md)
 
 
 # Полезные ссылки:
@@ -88,13 +80,19 @@
 
 ## [Описание HTTP API комманд](/http_api_rus.md)
 
+## [Карта сети  zigbee](/map_rus.md)
+
 ## [FAQ (часто задаваемые вопросы)](/faq_rus.md)
 
 ## [Структура сообщений zigbee2mqtt](https://www.zigbee2mqtt.io/information/mqtt_topics_and_message_structure.html) (поддерживается большинство комманд)
 
 ## [Структура сообщений SLS zigbee2mqtt](/slscommand_rus.md)
 
+## [Список поддерживаемых устройств](https://slsys.io/action/devicelists.html)
 
+## [Сбор средств на покупку оборудования для добавления поддержки](/donate_rus.md)
+
+## [Создание своей страницы устройств](/ui_rus.md)
 
 # Интеграции
 
@@ -116,3 +114,20 @@
 ## [Интеграция с HomeKit](/int_homekit_rus.md)  (в разработке)
 
 ## [Интеграция с Domoticz](/int_domoticz_rus.md)  (в разработке)
+
+# Полезные ссылки
+[Официальный чат проекта](https://t.me/slsys)
+
+[Группа новостей и новых версий прошивок](https://t.me/slssys)
+
+[Список поддерживаемых устройств](https://slsys.io/action/devicelists.html)
+
+[Как собрать шлюз самому](https://modkam.ru/?p=1342)
+
+[Где приобрести](https://t.me/zigberu)
+
+[Партнерский чат для обсуждения устройств Zigbee](https://t.me/zigbeer)
+
+[Русский Wiki на портале myzigbee.ru](https://myzigbee.ru/)
+
+
